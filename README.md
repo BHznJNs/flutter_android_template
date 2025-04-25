@@ -1,59 +1,76 @@
-# Flutter Android Template
-
-## Introduction
+<div align="center">
+    <br />
+    <img src="assets/icon/icon.png" alt="NFC PLinkD Logo" width="160" height="160" />
+    <h1>Flutter Android Template</h1>
+    <a href="README_zh.md">中文</a> | 
+    <a href="README_ja.md">日本語</a> | 
+    <a href="README_fr.md">Français</a>
+    <br />
+    <br />
+</div>
 
 This is a template for building Flutter applications for Android. It provides a basic structure and includes common configurations (language and dynamic theme) to help you get started quickly.
 
-## Usage Guide
+## Getting Started
 
-1.  **Clone the repository:**
+### Initiation
 
-```bash
-git clone https://github.com/your_username/flutter_android_template.git
+Use this template repo, change the name and clone it.
+
+### Changing the Project Name and Package Name
+
+Changing the project name in Flutter involves manually modifying several files. Follow these steps to change the project name:
+
+1. Update `pubspec.yaml`:
+    Change the `name` property to your new project name.
+
+```yaml
+name: your_new_project_name
 ```
 
-2.  **Navigate to the project directory:**
+2. Update `android/app/src/main/res/values/strings.xml`:
 
-```bash
-cd flutter_android_template
+Change the `app_name` string to your new project name.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Your New App Name</string>
+</resources>
 ```
 
-3.  **Get dependencies:**
+3. Update package names
 
-```bash
-flutter pub get
+Change the package name used in `android/app/src/main/kotlin/com/example/template/MainActivity.kt`, as well as the path of it.
+Change the `namespace` and `applicationId` used in the `android\app\build.gradle.kts` file.
+
+4. Update the imports in `.dart`
+
+Change the imports from:
+
+```dart
+import 'package:flutter_android_template/**.dart';
 ```
 
-4.  **Run the app:**
+to:
 
-```bash
-flutter run
+```dart
+import 'package:your_new_project_name/**.dart';
 ```
 
-This will launch the app on a connected Android device or emulator.
+### App signing for GitHub Actions
 
-## Changing the Project Name
+Get your `.jks` file, create the base64 string of it:
 
-Changing the project name in Flutter involves modifying several files. While the `flutter create --project-name new_project_name .` command can sometimes update the project name, it's not the most reliable method and may not update all necessary configurations.
-
-A more comprehensive approach is to manually update the project name in the following files:
-
-*   `pubspec.yaml`
-*   `android/app/src/main/AndroidManifest.xml`
-*   `ios/Runner/Info.plist` (if applicable)
-*   `ios/Runner.xcodeproj/project.pbxproj` (if applicable)
-*   Potentially other files depending on your project setup.
-
-Alternatively, you can use a tool like `flutter_rename_app` to automate this process. You can find more information about it [here](https://pub.dev/packages/flutter_rename_app).
-
-To use `flutter_rename_app`, first install it:
-
-```bash
-flutter pub global activate flutter_rename_app
+```shell
+# Unix
+base64 -w 0 <Your-Key-Store-Name>.jks
+# Windows
+[System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("<Your-Key-Store-Name>.jks"))
 ```
 
-Then, run the command in your project directory:
-
-```bash
-flutter_rename_app
-```
+In the `Secrets and Variables  --  Actions` of your GitHub repo, add secrets:
+- SIGNING_KEYSTORE: The base64 code created above
+- SIGNING_KEYSTORE_PASSWORD: The key store password
+- SIGNING_KEY_ALIAS: The alias for the `.jks` file
+- SIGNING_KEY_PASSWORD: The password for the alias
