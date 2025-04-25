@@ -4,7 +4,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 enum LanguageOption {
   system,
   english,
-  simplifiedChinese;
+  simplifiedChinese,
+  japanese,
+  french;
 
   static LanguageOption fromLocale(Locale locale) {
     if (locale.languageCode == 'en') {
@@ -18,16 +20,20 @@ enum LanguageOption {
 
   Locale? toLocale() {
     switch (this) {
-      case LanguageOption.simplifiedChinese: return Locale('zh', 'CN');
       case LanguageOption.english: return Locale('en');
+      case LanguageOption.simplifiedChinese: return Locale('zh', 'CN');
+      case LanguageOption.japanese: return Locale('ja');
+      case LanguageOption.french: return Locale('fr');
       case LanguageOption.system: return null;
     }
   }
 
   String toLanguageDisplayName() {
     switch (this) {
-      case LanguageOption.simplifiedChinese: return '简体中文';
       case LanguageOption.english: return 'English';
+      case LanguageOption.simplifiedChinese: return '简体中文';
+      case LanguageOption.japanese: return '日本語';
+      case LanguageOption.french: return 'Français';
       default: throw Exception('Unresolved locale: $this');
     }
   }

@@ -1,0 +1,11 @@
+{
+  "@@locale": "fr",
+  "settingsAppBarTitle": "Paramètres",
+  "applicationThemeSettingTitle": "Thème de l'application",
+  "lightThemeOption": "Clair",
+  "darkThemeOption": "Sombre",
+  "systemThemeOption": "Système",
+  "languagesSettingTitle": "Langues",
+  "languagesAppBarTitle": "Langues",
+  "systemLanguageOption": "Système"
+}

@@ -325,6 +325,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.9"
+  rename_app:
+    dependency: "direct dev"
+    description:
+      name: rename_app
+      sha256: "4fc964397592fc4a01e7ccb156b6e5288cb04e1c82317c02390f6726bde78b88"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.6.3"
   shared_preferences:
     dependency: "direct main"
     description:

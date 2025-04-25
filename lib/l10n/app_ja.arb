@@ -1,0 +1,11 @@
+{
+  "@@locale": "ja",
+  "settingsAppBarTitle": "設定",
+  "applicationThemeSettingTitle": "アプリケーションのテーマ",
+  "lightThemeOption": "ライト",
+  "darkThemeOption": "ダーク",
+  "systemThemeOption": "システム",
+  "languagesSettingTitle": "言語",
+  "languagesAppBarTitle": "言語",
+  "systemLanguageOption": "システム"
+}
