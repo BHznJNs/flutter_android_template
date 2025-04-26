@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Il s'agit d'un modèle pour la création d'applications Flutter pour Android. Il fournit une structure de base et inclut des configurations courantes (langue et thème dynamique) pour vous aider à démarrer rapidement.
+Il s'agit d'un modèle pour la création d'applications Flutter pour Android, qui comprend des thèmes dynamiques de base, des paramètres de thème, des paramètres de langue et des scripts de construction GitHub Actions.
 
-## Démarrage rapide
+## Comment utiliser
 
 ### Initialisation
 

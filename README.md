@@ -9,9 +9,9 @@
     <br />
 </div>
 
-This is a template for building Flutter applications for Android. It provides a basic structure and includes common configurations (language and dynamic theme) to help you get started quickly.
+This is a template for building Flutter applications for Android, which includes basic dynamic themes, theme settings, language settings and GitHub Actions scripts.
 
-## Getting Started
+## How to Use
 
 ### Initiation
 
