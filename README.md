@@ -74,3 +74,7 @@ In the `Secrets and Variables  --  Actions` of your GitHub repo, add secrets:
 - SIGNING_KEYSTORE_PASSWORD: The key store password
 - SIGNING_KEY_ALIAS: The alias for the `.jks` file
 - SIGNING_KEY_PASSWORD: The password for the alias
+
+## Use case
+
+- [MotionEaseTune](https://github.com/BHznJNs/MotionEaseTune), A simple application that can prevent you from motion sickness via 100Hz sound.

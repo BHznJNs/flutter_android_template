@@ -67,3 +67,7 @@ base64 -w 0 <您的密钥库名称>.jks
 - SIGNING_KEYSTORE_PASSWORD: 密钥库密码
 - SIGNING_KEY_ALIAS: `.jks` 文件的别名
 - SIGNING_KEY_PASSWORD: 别名的密码
+
+## 用例
+
+- [MotionEaseTune](https://github.com/BHznJNs/MotionEaseTune), 一个简单的应用程序，可以通过 100Hz 的声音防止您晕车。

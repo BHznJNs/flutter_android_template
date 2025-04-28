@@ -67,3 +67,7 @@ GitHub リポジトリの `Secrets and Variables -- Actions` に、以下の sec
 - SIGNING_KEYSTORE_PASSWORD: キーストアパスワード
 - SIGNING_KEY_ALIAS: `.jks` ファイルのエイリアス
 - SIGNING_KEY_PASSWORD: エイリアスのパスワード
+
+## ユースケース
+
+- [MotionEaseTune](https://github.com/BHznJNs/MotionEaseTune), 100Hz の音で乗り物酔いを防ぐシンプルなアプリケーションです。

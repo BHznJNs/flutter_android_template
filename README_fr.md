@@ -67,3 +67,7 @@ Dans les `Secrets and Variables -- Actions` de votre dépôt GitHub, ajoutez les
 - SIGNING_KEYSTORE_PASSWORD: Le mot de passe du magasin de clés
 - SIGNING_KEY_ALIAS: L'alias du fichier `.jks`
 - SIGNING_KEY_PASSWORD: Le mot de passe de l'alias
+
+## Cas d'utilisation
+
+- [MotionEaseTune](https://github.com/BHznJNs/MotionEaseTune), Une application simple qui peut vous empêcher du mal des transports via un son de 100Hz.
