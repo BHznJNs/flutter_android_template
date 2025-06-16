@@ -9,13 +9,13 @@ enum LanguageOption {
   french;
 
   static LanguageOption fromLocale(Locale locale) {
-    if (locale.languageCode == 'en') {
-      return LanguageOption.english;
-    } else
-    if (locale.languageCode == 'zh') {
-      return LanguageOption.simplifiedChinese;
+    switch (locale.languageCode) {
+      case 'en': return LanguageOption.english;
+      case 'zh': return LanguageOption.simplifiedChinese;
+      case 'ja': return LanguageOption.japanese;
+      case 'fr': return LanguageOption.french;
+      default: throw Exception('Unresolved locale: $locale');
     }
-    throw Exception('Unresolved locale: $locale');
   }
 
   Locale? toLocale() {
