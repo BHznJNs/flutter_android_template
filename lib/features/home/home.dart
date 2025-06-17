@@ -9,7 +9,7 @@ class HomePage extends StatefulWidget {
   State createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin  {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final actions = [
